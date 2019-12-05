@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddc"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Rent Service"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_margin="25dp"
+        android:id="@+id/title"
+
+        />
+<Spinner
+    android:id="@+id/choosecar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/title"
+    android:entries="@array/typesofCars"/>
+
+    <EditText
+        android:id="@+id/dailyrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choosecar"
+        android:hint="Daily Rent"
+        android:padding="10dp"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/choosendays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dailyrent"
+        android:hint="How many days you want to rent?"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3"
+        android:layout_below="@+id/choosendays"
+        />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Driver's Age"
+        android:textSize="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/seekBar"
+        android:textStyle="bold"/>
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/Age">
+
+        <RadioButton
+        android:id="@+id/less20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiogroup"
+        android:text="Less than 20"
+            android:textColor="#050"
+        />
+    <RadioButton
+        android:id="@+id/between"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/less20"
+        android:text="Between 21 and 60"
+        android:textColor="#050"
+        />
+    <RadioButton
+        android:id="@+id/Above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/between"
+        android:textColor="#050"
+        android:text="Above 60"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/radiogroup"
+        />
+    <LinearLayout
+        android:id="@+id/linearid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="330dp"
+       >
+    <CheckBox
+        android:id="@+id/gps"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options"
+        android:text="GPS"
+        android:textColor="#050"
+
+        />
+
+    <CheckBox
+        android:id="@+id/childseat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Child Seat"
+        android:textColor="#050"
+        />
+    <CheckBox
+        android:id="@+id/unlimited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlimited millage"
+        android:layout_marginLeft="20dp"
+        android:textColor="#050"
+        />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearid"
+        android:text="Amount"
+        android:layout_marginLeft="30dp"
+        />
+    <EditText
+        android:id="@+id/totalpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearid"
+        android:text="Total Payment"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/amount"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Details"
+        android:textColor="#a00"
+        android:layout_below="@+id/totalpayment"/>
+
+</RelativeLayout>
